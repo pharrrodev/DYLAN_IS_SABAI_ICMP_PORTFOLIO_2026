@@ -13,7 +13,6 @@
             --text: #f1f5f9;
             --accent: #38bdf8;
             --spotify: #1db954;
-            --video: #fb7185;
             --soundcloud: #ff5500;
             --app: #a855f7;
         }
@@ -103,29 +102,7 @@
         }
         .spotify { border-left: 4px solid var(--spotify); }
         .soundcloud { border-left: 4px solid var(--soundcloud); }
-        .video { border-left: 4px solid var(--video); }
         .app { border-left: 4px solid var(--app); }
-        .mix-wrap {
-            margin-top: 0.5rem;
-            border-radius: 0.5rem;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: #000;
-        }
-        .mix-wrap video {
-            display: block;
-            width: 100%;
-            vertical-align: middle;
-        }
-        .mix-fallback {
-            font-size: 0.75rem;
-            color: var(--muted);
-            margin: 0.5rem 0 0;
-            text-align: center;
-        }
-        .mix-fallback a {
-            color: var(--accent);
-        }
         .fineprint {
             font-size: 0.7rem;
             color: #64748b;
@@ -138,34 +115,6 @@
     <div class="card">
         <h1>DYLAN IS SABAI</h1>
         <p class="tagline">ICMP Audition Portfolio — 2026</p>
-
-        <div class="section-label">8-track DJ mix</div>
-        <p class="section-note">Play the audition demo video (same folder as this page).</p>
-        <div class="mix-wrap">
-            <video id="mix-video" controls playsinline preload="metadata" title="8-track DJ mix — Dylan Is Sabai">
-                <source id="mix-source" src="Mix_minimal_deep_tech_DylanIsSabai_april_15_2026_audition_demo.mp4" type="video/mp4">
-                Your browser cannot play this video inline.
-            </video>
-        </div>
-        <p class="mix-fallback">
-            <a id="mix-download" href="Mix_minimal_deep_tech_DylanIsSabai_april_15_2026_audition_demo.mp4" target="_blank" rel="noopener">Open video in a new tab</a>
-        </p>
-        <script>
-        (function () {
-            // GitHub blocks files over 100MB, so this ~2GB mix cannot live in the repo.
-            // After you host the MP4 elsewhere, paste a direct HTTPS link here and redeploy.
-            var REMOTE_MP4_URL = "";
-            var localName = "Mix_minimal_deep_tech_DylanIsSabai_april_15_2026_audition_demo.mp4";
-            var srcEl = document.getElementById("mix-source");
-            var vid = document.getElementById("mix-video");
-            var dl = document.getElementById("mix-download");
-            if (REMOTE_MP4_URL) {
-                srcEl.src = REMOTE_MP4_URL;
-                dl.href = REMOTE_MP4_URL;
-                vid.load();
-            }
-        })();
-        </script>
 
         <div class="section-label">J-Province — Trap (Spotify)</div>
         <p class="section-note">Reference tracks on Spotify.</p>
@@ -186,7 +135,7 @@
 
         <div class="section-label">Sabai Ledger (web app)</div>
         <a href="https://dylanissabailedger.netlify.app/" class="btn app" target="_blank" rel="noopener noreferrer">Open Sabai Ledger <span class="sub">Live on Netlify — executive summary &amp; ledger</span></a>
-        <p class="fineprint">Locally: keep the demo <code>.mp4</code> next to this HTML. On Netlify from Git: use a hosted MP4 URL in <code>REMOTE_MP4_URL</code> inside this file, or deploy with CLI/Drop including the video. Spotify and SoundCloud need you to be logged in where relevant.</p>
+        <p class="fineprint">Spotify and SoundCloud may ask you to sign in or open in their app.</p>
     </div>
 </body>
 </html>
