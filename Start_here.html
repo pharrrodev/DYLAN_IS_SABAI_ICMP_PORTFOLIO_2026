@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Is Sabai | Portfolio 2026</title>
+    <style>
+        :root {
+            --bg: #0b1220;
+            --card: #111827;
+            --border: #1f2937;
+            --muted: #94a3b8;
+            --text: #f1f5f9;
+            --accent: #38bdf8;
+            --spotify: #1db954;
+            --video: #fb7185;
+            --soundcloud: #ff5500;
+            --app: #a855f7;
+        }
+        * { box-sizing: border-box; }
+        body {
+            background: radial-gradient(ellipse 120% 80% at 50% -20%, #1e3a5f 0%, var(--bg) 55%);
+            color: var(--text);
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .card {
+            background: var(--card);
+            padding: 2rem 1.75rem;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+            width: 100%;
+            max-width: 28rem;
+            border: 1px solid var(--border);
+        }
+        h1 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            color: var(--accent);
+            margin: 0 0 0.35rem;
+            text-align: center;
+        }
+        .tagline {
+            color: var(--muted);
+            font-size: 0.875rem;
+            text-align: center;
+            margin: 0 0 1.75rem;
+            line-height: 1.5;
+        }
+        .section-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin: 1.25rem 0 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+        .section-label:first-of-type {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+        .section-note {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin: 0 0 0.65rem;
+            line-height: 1.45;
+        }
+        .btn {
+            display: block;
+            background: #1f2937;
+            color: var(--text);
+            text-decoration: none;
+            padding: 0.75rem 1rem;
+            margin: 0.4rem 0;
+            border-radius: 0.5rem;
+            transition: background 0.15s, transform 0.1s;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 1px solid #334155;
+            text-align: left;
+        }
+        .btn:hover {
+            background: #334155;
+        }
+        .btn:active {
+            transform: scale(0.99);
+        }
+        .btn .sub {
+            display: block;
+            font-weight: 400;
+            font-size: 0.72rem;
+            color: var(--muted);
+            margin-top: 0.2rem;
+        }
+        .spotify { border-left: 4px solid var(--spotify); }
+        .soundcloud { border-left: 4px solid var(--soundcloud); }
+        .video { border-left: 4px solid var(--video); }
+        .app { border-left: 4px solid var(--app); }
+        .mix-wrap {
+            margin-top: 0.5rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: #000;
+        }
+        .mix-wrap video {
+            display: block;
+            width: 100%;
+            vertical-align: middle;
+        }
+        .mix-fallback {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin: 0.5rem 0 0;
+            text-align: center;
+        }
+        .mix-fallback a {
+            color: var(--accent);
+        }
+        .fineprint {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin: 1rem 0 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>DYLAN IS SABAI</h1>
+        <p class="tagline">ICMP Audition Portfolio — 2026</p>
+
+        <div class="section-label">8-track DJ mix</div>
+        <p class="section-note">Play the audition demo video (same folder as this page).</p>
+        <div class="mix-wrap">
+            <video id="mix-video" controls playsinline preload="metadata" title="8-track DJ mix — Dylan Is Sabai">
+                <source id="mix-source" src="Mix_minimal_deep_tech_DylanIsSabai_april_15_2026_audition_demo.mp4" type="video/mp4">
+                Your browser cannot play this video inline.
+            </video>
+        </div>
+        <p class="mix-fallback">
+            <a id="mix-download" href="Mix_minimal_deep_tech_DylanIsSabai_april_15_2026_audition_demo.mp4" target="_blank" rel="noopener">Open video in a new tab</a>
+        </p>
+        <script>
+        (function () {
+            // GitHub blocks files over 100MB, so this ~2GB mix cannot live in the repo.
+            // After you host the MP4 elsewhere, paste a direct HTTPS link here and redeploy.
+            var REMOTE_MP4_URL = "";
+            var localName = "Mix_minimal_deep_tech_DylanIsSabai_april_15_2026_audition_demo.mp4";
+            var srcEl = document.getElementById("mix-source");
+            var vid = document.getElementById("mix-video");
+            var dl = document.getElementById("mix-download");
+            if (REMOTE_MP4_URL) {
+                srcEl.src = REMOTE_MP4_URL;
+                dl.href = REMOTE_MP4_URL;
+                vid.load();
+            }
+        })();
+        </script>
+
+        <div class="section-label">J-Province — Trap (Spotify)</div>
+        <p class="section-note">Reference tracks on Spotify.</p>
+        <a href="https://open.spotify.com/track/35Z8OB2InBYIW0vM7DTkZE?si=222ae8d618c84ba2" class="btn spotify" target="_blank" rel="noopener noreferrer">J-Province <span class="sub">Spotify — track 1</span></a>
+        <a href="https://open.spotify.com/track/4NRDWnM89nri0QGRSNjM9E?si=83c317966acb48fb" class="btn spotify" target="_blank" rel="noopener noreferrer">J-Province <span class="sub">Spotify — track 2</span></a>
+        <a href="https://open.spotify.com/track/4kLoUYkHvNGG9U2TWn59Ed?si=a743f369decd476c" class="btn spotify" target="_blank" rel="noopener noreferrer">J-Province <span class="sub">Spotify — track 3</span></a>
+        <a href="https://open.spotify.com/track/3X0X7y52JZQkt2KiOqvoHn?si=6278ecb3066f433d" class="btn spotify" target="_blank" rel="noopener noreferrer">J-Province <span class="sub">Spotify — track 4</span></a>
+        <a href="https://open.spotify.com/track/6semTIhn0hGXGuKQMpx2QT?si=d25787356ebe4a96" class="btn spotify" target="_blank" rel="noopener noreferrer">J-Province <span class="sub">Spotify — track 5</span></a>
+
+        <div class="section-label">Da Sweetnezz — Amapiano &amp; House (Spotify)</div>
+        <p class="section-note">Reference tracks on Spotify.</p>
+        <a href="https://open.spotify.com/track/3wXFVJ8cAi9ew3JrPF6UTk?si=608296f68bd3406e" class="btn spotify" target="_blank" rel="noopener noreferrer">Da Sweetnezz <span class="sub">Spotify — track 1</span></a>
+        <a href="https://open.spotify.com/track/7eePCqUvDjkAMXuZaLPXjD?si=35819ad33bf5455a" class="btn spotify" target="_blank" rel="noopener noreferrer">Da Sweetnezz <span class="sub">Spotify — track 2</span></a>
+
+        <div class="section-label">My music (SoundCloud)</div>
+        <p class="section-note">Tracks I have produced.</p>
+        <a href="https://soundcloud.com/troy-mccullagh-553323479" class="btn soundcloud" target="_blank" rel="noopener noreferrer">Dylan Is Sabai on SoundCloud <span class="sub">My producer page</span></a>
+
+        <div class="section-label">Sabai Ledger (web app)</div>
+        <a href="https://dylanissabailedger.netlify.app/" class="btn app" target="_blank" rel="noopener noreferrer">Open Sabai Ledger <span class="sub">Live on Netlify — executive summary &amp; ledger</span></a>
+        <p class="fineprint">Locally: keep the demo <code>.mp4</code> next to this HTML. On Netlify from Git: use a hosted MP4 URL in <code>REMOTE_MP4_URL</code> inside this file, or deploy with CLI/Drop including the video. Spotify and SoundCloud need you to be logged in where relevant.</p>
+    </div>
+</body>
+</html>

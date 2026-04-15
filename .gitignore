@@ -1,0 +1,7 @@
+# ~2GB — GitHub rejects files over 100MB; do not commit
+*.mp4
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
